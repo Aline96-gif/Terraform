@@ -1,0 +1,806 @@
+2022/07/01 08:35:11 [INFO] Terraform version: 0.14.4  
+2022/07/01 08:35:11 [INFO] Go runtime version: go1.15.6
+2022/07/01 08:35:11 [INFO] CLI args: []string{"/root/.terraform.versions/terraform_0.14.4", "plan", "-out=tfplan.out"}
+2022/07/01 08:35:11 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2022/07/01 08:35:11 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2022/07/01 08:35:11 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2022/07/01 08:35:11 [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2022/07/01 08:35:11 [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2022/07/01 08:35:11 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2022/07/01 08:35:11 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2022/07/01 08:35:11 [INFO] CLI command args: []string{"plan", "-out=tfplan.out"}
+2022/07/01 08:35:11 [TRACE] Meta.Backend: built configuration for "s3" backend with hash value 2022208370
+2022/07/01 08:35:11 [TRACE] Preserving existing state lineage "c79254fb-c80c-8391-bba7-4d747683e5cc"
+2022/07/01 08:35:11 [TRACE] Preserving existing state lineage "c79254fb-c80c-8391-bba7-4d747683e5cc"
+2022/07/01 08:35:11 [TRACE] Meta.Backend: working directory was previously initialized for "s3" backend
+2022/07/01 08:35:11 [TRACE] Meta.Backend: using already-initialized, unchanged "s3" backend configuration
+2022/07/01 08:35:11 [INFO] AWS Auth provider used: "SharedCredentialsProvider"
+2022/07/01 08:35:11 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2022/07/01 08:35:12 [TRACE] Meta.Backend: instantiated backend of type *s3.Backend
+2022/07/01 08:35:12 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2022/07/01 08:35:12 [TRACE] getproviders.SearchLocalDirectory: .terraform/providers is a symlink to .terraform/providers
+2022/07/01 08:35:12 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v3.23.0 for linux_amd64 at .terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64
+2022/07/01 08:35:12 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 3.23.0
+2022/07/01 08:35:13 [DEBUG] checking for provisioner in "."
+2022/07/01 08:35:13 [DEBUG] checking for provisioner in "/root/.terraform.versions"
+2022/07/01 08:35:13 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2022/07/01 08:35:13 [TRACE] Meta.Backend: backend *s3.Backend does not support operations, so wrapping it in a local backend
+2022/07/01 08:35:13 [INFO] backend/local: starting Plan operation
+2022/07/01 08:35:13 [TRACE] backend/local: requesting state manager for workspace "default"
+2022/07/01 08:35:13 [TRACE] backend/local: requesting state lock for workspace "default"
+2022/07/01 08:35:13 [TRACE] backend/local: reading remote state for workspace "default"
+2022/07/01 08:35:14 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2022/07/01 08:35:14 [TRACE] backend/local: building context for current working directory
+2022/07/01 08:35:14 [TRACE] terraform.NewContext: starting
+2022/07/01 08:35:14 [TRACE] terraform.NewContext: loading provider schemas
+2022/07/01 08:35:14 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2022-07-01T08:35:14.722-0300 [INFO]  plugin: configuring client automatic mTLS
+2022-07-01T08:35:14.756-0300 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5]
+2022-07-01T08:35:14.756-0300 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5 pid=68181
+2022-07-01T08:35:14.756-0300 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5
+2022-07-01T08:35:14.778-0300 [INFO]  plugin.terraform-provider-aws_v3.23.0_x5: configuring server automatic mTLS: timestamp=2022-07-01T08:35:14.777-0300
+2022-07-01T08:35:14.793-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: plugin address: address=/tmp/plugin746813111 network=unix timestamp=2022-07-01T08:35:14.793-0300
+2022-07-01T08:35:14.793-0300 [DEBUG] plugin: using plugin: version=5
+2022/07/01 08:35:14 [TRACE] GRPCProvider: GetSchema
+2022-07-01T08:35:14.825-0300 [TRACE] plugin.stdio: waiting for stdio data
+2022/07/01 08:35:14 [TRACE] GRPCProvider: Close
+2022-07-01T08:35:14.888-0300 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022-07-01T08:35:14.891-0300 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5 pid=68181
+2022-07-01T08:35:14.891-0300 [DEBUG] plugin: plugin exited
+2022/07/01 08:35:14 [TRACE] terraform.NewContext: complete
+2022/07/01 08:35:14 [TRACE] backend/local: finished building terraform.Context
+2022/07/01 08:35:14 [TRACE] backend/local: requesting interactive input, if necessary
+2022/07/01 08:35:14 [TRACE] Context.Input: Prompting for provider arguments
+2022/07/01 08:35:14 [TRACE] Context.Input: Provider provider.aws declared at main.tf:17,1-15
+2022/07/01 08:35:14 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2022/07/01 08:35:14 [TRACE] backend/local: running validation operation
+2022/07/01 08:35:14 [INFO] terraform: building graph: GraphTypeValidate
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2022/07/01 08:35:14 [TRACE] ConfigTransformer: Starting for path: 
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+  ------
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.LocalTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.OutputTransformer
+2022/07/01 08:35:14 [TRACE] OutputTransformer: adding id as *terraform.NodeApplyableOutput
+2022/07/01 08:35:14 [TRACE] OutputTransformer: adding ami as *terraform.NodeApplyableOutput
+2022/07/01 08:35:14 [TRACE] OutputTransformer: adding arn as *terraform.NodeApplyableOutput
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+  output.ami - *terraform.NodeApplyableOutput
+  output.arn - *terraform.NodeApplyableOutput
+  output.id - *terraform.NodeApplyableOutput
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.StateTransformer
+2022/07/01 08:35:14 [TRACE] StateTransformer: state is empty, so nothing to do
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2022/07/01 08:35:14 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.web" (*terraform.NodeValidatableResource) config from ec2.tf:1,1-30
+2022/07/01 08:35:14 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.web
+2022/07/01 08:35:14 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_ami.ubuntu" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"data.tf", Start:hcl.Pos{Line:1, Column:1, Byte:0}, End:hcl.Pos{Line:1, Column:24, Byte:23}}
+2022/07/01 08:35:14 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_ami.ubuntu
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2022/07/01 08:35:14 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from main.tf:17,1-15
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+  output.ami - *terraform.NodeApplyableOutput
+  output.arn - *terraform.NodeApplyableOutput
+  output.id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2022/07/01 08:35:14 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.web
+2022/07/01 08:35:14 [DEBUG] ProviderTransformer: "aws_instance.web" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/07/01 08:35:14 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_ami.ubuntu
+2022/07/01 08:35:14 [DEBUG] ProviderTransformer: "data.aws_ami.ubuntu" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.ami - *terraform.NodeApplyableOutput
+  output.arn - *terraform.NodeApplyableOutput
+  output.id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2022/07/01 08:35:14 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.ami - *terraform.NodeApplyableOutput
+  output.arn - *terraform.NodeApplyableOutput
+  output.id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2022/07/01 08:35:14 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_ami.ubuntu
+2022/07/01 08:35:14 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2022/07/01 08:35:14 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.web
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/07/01 08:35:14 [DEBUG] ReferenceTransformer: "output.arn" references: [aws_instance.web]
+2022/07/01 08:35:14 [DEBUG] ReferenceTransformer: "output.ami" references: [aws_instance.web]
+2022/07/01 08:35:14 [DEBUG] ReferenceTransformer: "data.aws_ami.ubuntu" references: []
+2022/07/01 08:35:14 [DEBUG] ReferenceTransformer: "var.aws_region" references: []
+2022/07/01 08:35:14 [DEBUG] ReferenceTransformer: "var.aws_profile" references: []
+2022/07/01 08:35:14 [DEBUG] ReferenceTransformer: "var.instance_type" references: []
+2022/07/01 08:35:14 [DEBUG] ReferenceTransformer: "output.id" references: [aws_instance.web]
+2022/07/01 08:35:14 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2022/07/01 08:35:14 [DEBUG] ReferenceTransformer: "aws_instance.web" references: [var.instance_type data.aws_ami.ubuntu]
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2022/07/01 08:35:14 [TRACE] attachDataDependenciesTransformer: data.aws_ami.ubuntu depends on []
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    output.ami - *terraform.NodeApplyableOutput
+    output.arn - *terraform.NodeApplyableOutput
+    output.id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_profile - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    output.ami - *terraform.NodeApplyableOutput
+    output.arn - *terraform.NodeApplyableOutput
+    output.id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_profile - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    output.ami - *terraform.NodeApplyableOutput
+    output.arn - *terraform.NodeApplyableOutput
+    output.id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_profile - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2022/07/01 08:35:14 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.web - *terraform.NodeValidatableResource
+    data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.ami - *terraform.NodeApplyableOutput
+    output.arn - *terraform.NodeApplyableOutput
+    output.id - *terraform.NodeApplyableOutput
+    var.aws_profile - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.web - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:14 [DEBUG] Starting graph walk: walkValidate
+2022/07/01 08:35:14 [TRACE] dag/walk: visiting "var.aws_region"
+2022/07/01 08:35:14 [TRACE] vertex "var.aws_region": starting visit (*terraform.NodeRootVariable)
+2022/07/01 08:35:14 [TRACE] vertex "var.aws_region": visit complete
+2022/07/01 08:35:14 [TRACE] dag/walk: visiting "var.aws_profile"
+2022/07/01 08:35:14 [TRACE] vertex "var.aws_profile": starting visit (*terraform.NodeRootVariable)
+2022/07/01 08:35:14 [TRACE] vertex "var.aws_profile": visit complete
+2022/07/01 08:35:14 [TRACE] dag/walk: visiting "var.instance_type"
+2022/07/01 08:35:14 [TRACE] vertex "var.instance_type": starting visit (*terraform.NodeRootVariable)
+2022/07/01 08:35:14 [TRACE] vertex "var.instance_type": visit complete
+2022/07/01 08:35:14 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2022/07/01 08:35:14 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2022-07-01T08:35:14.892-0300 [INFO]  plugin: configuring client automatic mTLS
+2022-07-01T08:35:14.907-0300 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5]
+2022-07-01T08:35:14.907-0300 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5 pid=68190
+2022-07-01T08:35:14.907-0300 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5
+2022-07-01T08:35:14.928-0300 [INFO]  plugin.terraform-provider-aws_v3.23.0_x5: configuring server automatic mTLS: timestamp=2022-07-01T08:35:14.928-0300
+2022-07-01T08:35:14.944-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: plugin address: address=/tmp/plugin617707079 network=unix timestamp=2022-07-01T08:35:14.944-0300
+2022-07-01T08:35:14.944-0300 [DEBUG] plugin: using plugin: version=5
+2022/07/01 08:35:14 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2022/07/01 08:35:14 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2022/07/01 08:35:14 [TRACE] GRPCProvider: GetSchema
+2022-07-01T08:35:14.977-0300 [TRACE] plugin.stdio: waiting for stdio data
+2022/07/01 08:35:15 [TRACE] GRPCProvider: PrepareProviderConfig
+2022/07/01 08:35:15 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "data.aws_ami.ubuntu"
+2022/07/01 08:35:15 [TRACE] vertex "data.aws_ami.ubuntu": starting visit (*terraform.NodeValidatableResource)
+2022/07/01 08:35:15 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2022/07/01 08:35:15 [TRACE] vertex "data.aws_ami.ubuntu": visit complete
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "aws_instance.web"
+2022/07/01 08:35:15 [TRACE] vertex "aws_instance.web": starting visit (*terraform.NodeValidatableResource)
+2022/07/01 08:35:15 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/07/01 08:35:15 [TRACE] vertex "aws_instance.web": visit complete
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "output.id"
+2022/07/01 08:35:15 [TRACE] vertex "output.id": starting visit (*terraform.NodeApplyableOutput)
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "output.arn"
+2022/07/01 08:35:15 [TRACE] vertex "output.arn": starting visit (*terraform.NodeApplyableOutput)
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "output.ami"
+2022/07/01 08:35:15 [TRACE] vertex "output.ami": starting visit (*terraform.NodeApplyableOutput)
+2022/07/01 08:35:15 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2022/07/01 08:35:15 [TRACE] GRPCProvider: Close
+2022/07/01 08:35:15 [TRACE] ExecuteWriteOutput: Saving Create change for output.id in changeset
+2022/07/01 08:35:15 [TRACE] ExecuteWriteOutput: Saving Create change for output.arn in changeset
+2022/07/01 08:35:15 [TRACE] EvalWriteOutput: Removing output.id from state (it is now null)
+2022/07/01 08:35:15 [TRACE] EvalWriteOutput: Removing output.arn from state (it is now null)
+2022/07/01 08:35:15 [TRACE] ExecuteWriteOutput: Saving Create change for output.ami in changeset
+2022/07/01 08:35:15 [TRACE] vertex "output.id": visit complete
+2022/07/01 08:35:15 [TRACE] EvalWriteOutput: Removing output.ami from state (it is now null)
+2022/07/01 08:35:15 [TRACE] vertex "output.arn": visit complete
+2022/07/01 08:35:15 [TRACE] vertex "output.ami": visit complete
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2022/07/01 08:35:15 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2022/07/01 08:35:15 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2022-07-01T08:35:15.099-0300 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022-07-01T08:35:15.102-0300 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5 pid=68190
+2022-07-01T08:35:15.102-0300 [DEBUG] plugin: plugin exited
+2022/07/01 08:35:15 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "root"
+2022/07/01 08:35:15 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2022/07/01 08:35:15 [TRACE] vertex "root": visit complete
+2022/07/01 08:35:15 [INFO] backend/local: plan calling Plan
+2022/07/01 08:35:15 [INFO] terraform: building graph: GraphTypePlan
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2022/07/01 08:35:15 [TRACE] ConfigTransformer: Starting for path: 
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.LocalTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.OutputTransformer
+2022/07/01 08:35:15 [TRACE] OutputTransformer: adding id as *terraform.NodeApplyableOutput
+2022/07/01 08:35:15 [TRACE] OutputTransformer: adding ami as *terraform.NodeApplyableOutput
+2022/07/01 08:35:15 [TRACE] OutputTransformer: adding arn as *terraform.NodeApplyableOutput
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+  output.ami - *terraform.NodeApplyableOutput
+  output.arn - *terraform.NodeApplyableOutput
+  output.id - *terraform.NodeApplyableOutput
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.StateTransformer
+2022/07/01 08:35:15 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2022/07/01 08:35:15 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_ami.ubuntu (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"data.tf", Start:hcl.Pos{Line:1, Column:1, Byte:0}, End:hcl.Pos{Line:1, Column:24, Byte:23}}
+2022/07/01 08:35:15 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_ami.ubuntu (expand)
+2022/07/01 08:35:15 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.web (expand)" (*terraform.nodeExpandPlannableResource) config from ec2.tf:1,1-30
+2022/07/01 08:35:15 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.web (expand)
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2022/07/01 08:35:15 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from main.tf:17,1-15
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+  output.ami - *terraform.NodeApplyableOutput
+  output.arn - *terraform.NodeApplyableOutput
+  output.id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2022/07/01 08:35:15 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.web (expand)
+2022/07/01 08:35:15 [DEBUG] ProviderTransformer: "aws_instance.web (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/07/01 08:35:15 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_ami.ubuntu (expand)
+2022/07/01 08:35:15 [DEBUG] ProviderTransformer: "data.aws_ami.ubuntu (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.ami - *terraform.NodeApplyableOutput
+  output.arn - *terraform.NodeApplyableOutput
+  output.id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2022/07/01 08:35:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.ami - *terraform.NodeApplyableOutput
+  output.arn - *terraform.NodeApplyableOutput
+  output.id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2022/07/01 08:35:15 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2022/07/01 08:35:15 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.web (expand)
+2022/07/01 08:35:15 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_ami.ubuntu (expand)
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/07/01 08:35:15 [DEBUG] ReferenceTransformer: "data.aws_ami.ubuntu (expand)" references: []
+2022/07/01 08:35:15 [DEBUG] ReferenceTransformer: "var.aws_region" references: []
+2022/07/01 08:35:15 [DEBUG] ReferenceTransformer: "output.arn" references: [aws_instance.web (expand)]
+2022/07/01 08:35:15 [DEBUG] ReferenceTransformer: "aws_instance.web (expand)" references: [var.instance_type data.aws_ami.ubuntu (expand)]
+2022/07/01 08:35:15 [DEBUG] ReferenceTransformer: "var.aws_profile" references: []
+2022/07/01 08:35:15 [DEBUG] ReferenceTransformer: "var.instance_type" references: []
+2022/07/01 08:35:15 [DEBUG] ReferenceTransformer: "output.id" references: [aws_instance.web (expand)]
+2022/07/01 08:35:15 [DEBUG] ReferenceTransformer: "output.ami" references: [aws_instance.web (expand)]
+2022/07/01 08:35:15 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2022/07/01 08:35:15 [TRACE] AttachDependenciesTransformer: data.aws_ami.ubuntu depends on []
+2022/07/01 08:35:15 [TRACE] AttachDependenciesTransformer: aws_instance.web depends on [data.aws_ami.ubuntu]
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2022/07/01 08:35:15 [TRACE] attachDataDependenciesTransformer: data.aws_ami.ubuntu depends on []
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2022/07/01 08:35:15 [TRACE] ForcedCBDTransformer: "aws_instance.web (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/07/01 08:35:15 [TRACE] ForcedCBDTransformer: "data.aws_ami.ubuntu (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    output.ami - *terraform.NodeApplyableOutput
+    output.arn - *terraform.NodeApplyableOutput
+    output.id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_profile - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    output.ami - *terraform.NodeApplyableOutput
+    output.arn - *terraform.NodeApplyableOutput
+    output.id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_profile - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    output.ami - *terraform.NodeApplyableOutput
+    output.arn - *terraform.NodeApplyableOutput
+    output.id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.aws_profile - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2022/07/01 08:35:15 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    var.instance_type - *terraform.NodeRootVariable
+  data.aws_ami.ubuntu (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.ami - *terraform.NodeApplyableOutput
+    output.arn - *terraform.NodeApplyableOutput
+    output.id - *terraform.NodeApplyableOutput
+    var.aws_profile - *terraform.NodeRootVariable
+    var.aws_region - *terraform.NodeRootVariable
+  output.ami - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.arn - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  output.id - *terraform.NodeApplyableOutput
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.web (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.aws_profile - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  ------
+2022/07/01 08:35:15 [DEBUG] Starting graph walk: walkPlan
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "var.aws_profile"
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2022/07/01 08:35:15 [TRACE] vertex "var.aws_profile": starting visit (*terraform.NodeRootVariable)
+2022/07/01 08:35:15 [TRACE] vertex "var.aws_profile": visit complete
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "var.instance_type"
+2022/07/01 08:35:15 [TRACE] vertex "var.instance_type": starting visit (*terraform.NodeRootVariable)
+2022/07/01 08:35:15 [TRACE] vertex "var.instance_type": visit complete
+2022/07/01 08:35:15 [TRACE] dag/walk: visiting "var.aws_region"
+2022/07/01 08:35:15 [TRACE] vertex "var.aws_region": starting visit (*terraform.NodeRootVariable)
+2022/07/01 08:35:15 [TRACE] vertex "var.aws_region": visit complete
+2022/07/01 08:35:15 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2022-07-01T08:35:15.104-0300 [INFO]  plugin: configuring client automatic mTLS
+2022-07-01T08:35:15.117-0300 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5]
+2022-07-01T08:35:15.117-0300 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5 pid=68199
+2022-07-01T08:35:15.117-0300 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5
+2022-07-01T08:35:15.138-0300 [INFO]  plugin.terraform-provider-aws_v3.23.0_x5: configuring server automatic mTLS: timestamp=2022-07-01T08:35:15.138-0300
+2022-07-01T08:35:15.154-0300 [DEBUG] plugin: using plugin: version=5
+2022-07-01T08:35:15.154-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: plugin address: network=unix address=/tmp/plugin426329604 timestamp=2022-07-01T08:35:15.154-0300
+2022/07/01 08:35:15 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2022-07-01T08:35:15.187-0300 [TRACE] plugin.stdio: waiting for stdio data
+2022/07/01 08:35:15 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2022/07/01 08:35:15 [TRACE] GRPCProvider: GetSchema
+2022/07/01 08:35:15 [TRACE] GRPCProvider: Configure
+2022-07-01T08:35:15.251-0300 [INFO]  plugin.terraform-provider-aws_v3.23.0_x5: 2022/07/01 08:35:15 [INFO] AWS Auth provider used: "SharedCredentialsProvider": timestamp=2022-07-01T08:35:15.251-0300
+2022-07-01T08:35:15.251-0300 [INFO]  plugin.terraform-provider-aws_v3.23.0_x5: 2022/07/01 08:35:15 [DEBUG] Trying to get account information via sts:GetCallerIdentity: timestamp=2022-07-01T08:35:15.251-0300
+2022-07-01T08:35:16.231-0300 [INFO]  plugin.terraform-provider-aws_v3.23.0_x5: 2022/07/01 08:35:16 [DEBUG] Trying to get account information via sts:GetCallerIdentity: timestamp=2022-07-01T08:35:16.231-0300
+2022/07/01 08:35:18 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2022/07/01 08:35:18 [TRACE] dag/walk: visiting "data.aws_ami.ubuntu (expand)"
+2022/07/01 08:35:18 [TRACE] vertex "data.aws_ami.ubuntu (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2022/07/01 08:35:18 [TRACE] vertex "data.aws_ami.ubuntu (expand)": expanding dynamic subgraph
+2022/07/01 08:35:18 [TRACE] vertex "data.aws_ami.ubuntu (expand)": entering dynamic subgraph
+2022/07/01 08:35:18 [TRACE] dag/walk: visiting "data.aws_ami.ubuntu"
+2022/07/01 08:35:18 [TRACE] vertex "data.aws_ami.ubuntu": starting visit (*terraform.NodePlannableResource)
+2022/07/01 08:35:18 [TRACE] vertex "data.aws_ami.ubuntu": expanding dynamic subgraph
+2022/07/01 08:35:18 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2022/07/01 08:35:18 [TRACE] ResourceCountTransformer: adding data.aws_ami.ubuntu as *terraform.NodePlannableResourceInstance
+2022/07/01 08:35:18 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.aws_ami.ubuntu - *terraform.NodePlannableResourceInstance
+  ------
+2022/07/01 08:35:18 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2022/07/01 08:35:18 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2022/07/01 08:35:18 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/07/01 08:35:18 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/07/01 08:35:18 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/07/01 08:35:18 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/07/01 08:35:18 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/07/01 08:35:18 [DEBUG] ReferenceTransformer: "data.aws_ami.ubuntu" references: []
+2022/07/01 08:35:18 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2022/07/01 08:35:18 [TRACE] Executing graph transform *terraform.RootTransformer
+2022/07/01 08:35:18 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2022/07/01 08:35:18 [TRACE] vertex "data.aws_ami.ubuntu": entering dynamic subgraph
+2022/07/01 08:35:18 [TRACE] dag/walk: visiting "data.aws_ami.ubuntu"
+2022/07/01 08:35:18 [TRACE] vertex "data.aws_ami.ubuntu": starting visit (*terraform.NodePlannableResourceInstance)
+2022/07/01 08:35:18 [TRACE] ReadResourceInstanceState: reading state for data.aws_ami.ubuntu
+2022/07/01 08:35:18 [TRACE] EvalReadData: Re-validating config for data.aws_ami.ubuntu
+2022/07/01 08:35:18 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2022/07/01 08:35:18 [TRACE] EvalReadData: data.aws_ami.ubuntu configuration is complete, so reading from provider
+2022/07/01 08:35:18 [TRACE] GRPCProvider: ReadDataSource
+2022-07-01T08:35:18.052-0300 [INFO]  plugin.terraform-provider-aws_v3.23.0_x5: 2022/07/01 08:35:18 [DEBUG] Reading AMI: {
+  Owners: ["amazon"]
+}: timestamp=2022-07-01T08:35:18.052-0300
+2022/07/01 08:35:20 [TRACE] dag/walk: vertex "output.ami" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:20 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2022/07/01 08:35:20 [TRACE] dag/walk: vertex "aws_instance.web (expand)" is waiting for "data.aws_ami.ubuntu (expand)"
+2022/07/01 08:35:20 [TRACE] dag/walk: vertex "output.id" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:20 [TRACE] dag/walk: vertex "output.arn" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:20 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:20 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "output.ami"
+2022/07/01 08:35:25 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:25 [TRACE] dag/walk: vertex "output.id" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:25 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2022/07/01 08:35:25 [TRACE] dag/walk: vertex "output.arn" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:25 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "output.ami"
+2022/07/01 08:35:25 [TRACE] dag/walk: vertex "aws_instance.web (expand)" is waiting for "data.aws_ami.ubuntu (expand)"
+2022/07/01 08:35:25 [TRACE] dag/walk: vertex "output.ami" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:30 [TRACE] dag/walk: vertex "output.arn" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:30 [TRACE] dag/walk: vertex "aws_instance.web (expand)" is waiting for "data.aws_ami.ubuntu (expand)"
+2022/07/01 08:35:30 [TRACE] dag/walk: vertex "output.ami" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:30 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "output.ami"
+2022/07/01 08:35:30 [TRACE] dag/walk: vertex "output.id" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:30 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:30 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2022/07/01 08:35:35 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:35 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2022/07/01 08:35:35 [TRACE] dag/walk: vertex "output.arn" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:35 [TRACE] dag/walk: vertex "aws_instance.web (expand)" is waiting for "data.aws_ami.ubuntu (expand)"
+2022/07/01 08:35:35 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "output.ami"
+2022/07/01 08:35:35 [TRACE] dag/walk: vertex "output.id" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:35 [TRACE] dag/walk: vertex "output.ami" is waiting for "aws_instance.web (expand)"
+2022/07/01 08:35:37 [TRACE] backend/local: waiting for the running operation to stop
+2022/07/01 08:35:37 [WARN] terraform: Stop called, initiating interrupt sequence
+2022/07/01 08:35:37 [WARN] terraform: run context exists, stopping
+2022/07/01 08:35:37 [INFO] terraform: waiting for graceful stop to complete
+2022/07/01 08:35:37 [TRACE] Context: requesting providers and provisioners to gracefully stop
+2022/07/01 08:35:37 [TRACE] GRPCProvider: Stop
+2022-07-01T08:35:37.046-0300 [TRACE] plugin.terraform-provider-aws_v3.23.0_x5: plugin received interrupt signal, ignoring: count=1 timestamp=2022-07-01T08:35:37.046-0300
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: panic: close of nil channel
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: 
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: goroutine 100 [running]:
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).stop(0xc0017672c0)
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:201 +0x71
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).Stop(0xc0017672c0, 0x716bf00, 0xc019a26840, 0xc019a26870, 0xc0017672c0, 0xc019a26840, 0xc001107ba0)
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:215 +0xa5
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/internal/tfplugin5._Provider_Stop_Handler(0x652cda0, 0xc0017672c0, 0x716bf00, 0xc019a26840, 0xc019a28840, 0x0, 0x716bf00, 0xc019a26840, 0x0, 0x0)
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/internal/tfplugin5/tfplugin5_grpc.pb.go:434 +0x214
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000457180, 0x718eae0, 0xc0000ca300, 0xc01939db00, 0xc0000c5a70, 0xa5270a8, 0x0, 0x0, 0x0)
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1194 +0x522
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: google.golang.org/grpc.(*Server).handleStream(0xc000457180, 0x718eae0, 0xc0000ca300, 0xc01939db00, 0x0)
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1517 +0xd05
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: google.golang.org/grpc.(*Server).serveStreams.func1.2(0xc0009b81b0, 0xc000457180, 0x718eae0, 0xc0000ca300, 0xc01939db00)
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:859 +0xa5
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2022-07-01T08:35:37.049-0300 [DEBUG] plugin.terraform-provider-aws_v3.23.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:857 +0x1fd
+2022-07-01T08:35:37.068-0300 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.23.0/linux_amd64/terraform-provider-aws_v3.23.0_x5 pid=68199 error="exit status 2"
+2022-07-01T08:35:37.068-0300 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022/07/01 08:35:37 [TRACE] vertex "data.aws_ami.ubuntu": visit complete
+2022/07/01 08:35:37 [TRACE] vertex "data.aws_ami.ubuntu": dynamic subgraph encountered errors
+2022/07/01 08:35:37 [TRACE] vertex "data.aws_ami.ubuntu": visit complete
+2022/07/01 08:35:37 [TRACE] vertex "data.aws_ami.ubuntu (expand)": dynamic subgraph encountered errors
+2022/07/01 08:35:37 [TRACE] vertex "data.aws_ami.ubuntu (expand)": visit complete
+2022/07/01 08:35:37 [TRACE] dag/walk: upstream of "aws_instance.web (expand)" errored, so skipping
+2022/07/01 08:35:37 [TRACE] dag/walk: upstream of "output.id" errored, so skipping
+2022/07/01 08:35:37 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" errored, so skipping
+2022/07/01 08:35:37 [TRACE] dag/walk: upstream of "output.arn" errored, so skipping
+2022/07/01 08:35:37 [TRACE] dag/walk: upstream of "output.ami" errored, so skipping
+2022/07/01 08:35:37 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2022/07/01 08:35:37 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2022/07/01 08:35:37 [TRACE] backend/local: graceful stop has completed
+2022/07/01 08:35:37 [WARN] terraform: stop complete
+2022/07/01 08:35:37 [INFO] backend/local: plan operation completed
+2022-07-01T08:35:37.069-0300 [DEBUG] plugin: plugin exited
